@@ -14,10 +14,16 @@ ABallBearing::ABallBearing()
 
 }
 
+
 // Called when the game starts or when spawned
 void ABallBearing::BeginPlay()
 {
 	Super::BeginPlay();
+
+	InitialLocation = BallMesh->GetComponentLocation();
+
+	BallMesh->SetLinearDamping(0.5f);
+	BallMesh->SetLinearDamping(0.5f);
 	
 }
 
@@ -26,12 +32,5 @@ void ABallBearing::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	InContact = true;
 }
-
-// Called to bind functionality to input
-void ABallBearing::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-}
-

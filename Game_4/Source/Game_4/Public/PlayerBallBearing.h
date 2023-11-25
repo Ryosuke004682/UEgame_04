@@ -15,8 +15,6 @@ class GAME_4_API APlayerBallBearing : public ABallBearing
 {
 	GENERATED_BODY()
 
-	
-	
 public:
 	
 	APlayerBallBearing();
@@ -56,5 +54,22 @@ private:
 
 	friend class ABallBearingHUD;
 	
+
+	UFUNCTION(BlueprintCallable, Category = "Ball Bearing")
+		void MyTestFunction
+		(
+			const TArray<float>& inParam1,
+			UPARAM(ref) TArray<float>& inParam2,
+			TArray<float>& outParam1,
+			const AActor* inParam3,
+			UPARAM(ref) AActor* inParam4,
+			AActor* inParam5,
+			AActor*& outParam2,
+			const int32 inParam6,
+			UPARAM(ref) int32 inParam7,
+			int32 inParam8,
+			const int32& inParam9,
+			int32& outParam3
+		);
 
 };

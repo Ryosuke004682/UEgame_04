@@ -71,6 +71,7 @@ private:
 		Canvas->DrawItem(item0);
 		
 		FCanvasTextItem item1(FVector2D(X + HorizontalOffset , Y) , value , MainFont , valueColor);
+		item1.EnableShadow(FLinearColor(0.f, 0.f, 0.f));
 		Canvas->DrawItem(item1);
 		Y += LinerHeight;
 
@@ -84,7 +85,4 @@ private:
 	float Y = 50.f;
 
 	float LinerHeight = 16.f;
-
-
-
 };
